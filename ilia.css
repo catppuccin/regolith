@@ -1,0 +1,18 @@
+.root_box {
+  margin: 8px;
+}
+
+.filter_entry {
+  border: none;
+  background: none;
+  min-height: 36px;
+  min-width: 320px;
+}
+
+.notebook {
+  border: none;
+}
+
+.keybindings {
+  font-family: RobotoMono Nerd Font;
+}

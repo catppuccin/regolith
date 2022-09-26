@@ -1,0 +1,30 @@
+! --------------------------------------------
+! -- Colors
+! --------------------------------------------
+
+#define color_rosewater   #f5e0dc
+#define color_flamingo    #f2cdcd
+#define color_pink        #f5c2e7
+#define color_mauve       #cba6f7
+#define color_red         #f38ba8
+#define color_maroon      #eba0ac
+#define color_peach       #fab387
+#define color_yellow      #f9e2af
+#define color_green       #a6e3a1
+#define color_teal        #94e2d5
+#define color_sky         #89dceb
+#define color_sapphire    #74c7ec
+#define color_blue        #89b4fa
+#define color_lavender    #b4befe
+#define color_text        #cdd6f4
+#define color_subtext1    #bac2de
+#define color_subtext0    #a6adc8
+#define color_overlay2    #9399b2
+#define color_overlay1    #7f849c
+#define color_overlay0    #6c7086
+#define color_surface2    #585b70
+#define color_surface1    #45475a
+#define color_surface0    #313244
+#define color_base        #1e1e2e
+#define color_mantle      #181825
+#define color_crust       #11111b

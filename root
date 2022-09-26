@@ -1,0 +1,51 @@
+! --------------------------------------------
+! -- This file is in the Xresource file format
+! --------------------------------------------
+
+! --------------------------------------------
+! -- Look name
+! --------------------------------------------
+
+regolith.look: Catppuccin
+
+
+
+! --------------------------------------------
+! -- Compositor Config
+! --------------------------------------------
+
+regolith.compositor.picom.config: /usr/share/regolith-look/catppuccin/picom.conf
+! -- Other compositor configs may be specified as desired:
+! -- regolith.compositor.compton.config
+
+! --------------------------------------------
+! -- Fonts
+! --------------------------------------------
+#include "/usr/share/regolith-look/catppuccin/typeface"
+
+
+! --------------------------------------------
+! -- Selected Flavour
+! --------------------------------------------
+#include "/usr/share/regolith-look/catppuccin/config/mocha"
+
+! --------------------------------------------
+! -- Selected accent you want to use
+! --------------------------------------------
+#define color_accent      color_blue
+
+
+! --------------------------------------------
+! -- Component resources
+! --------------------------------------------
+
+#include "/usr/share/regolith-look/catppuccin/i3xrocks"
+#include "/usr/share/regolith-look/catppuccin/i3-wm"
+! #include "/usr/share/regolith-look/catppuccin/gnome-terminal"
+
+! --------------------------------------------
+! -- Loader Path - Path to script responsible
+! -- for configuring UI from Xres values
+! --------------------------------------------
+
+regolith.look.loader: /usr/share/regolith-look/default_loader.sh

@@ -1,0 +1,11 @@
+! --------------------------------------------
+! -- Fonts
+! --------------------------------------------
+
+#define gtk_font_name RobotoMono Nerd Font 12
+#define gtk_document_font_name Sans 12
+#define gtk_monospace_font_name RobotoMono Nerd Font 12
+
+gtk.font_name: gtk_font_name
+gtk.document_font_name: gtk_document_font_name
+gtk.monospace_font_name: gtk_monospace_font_name

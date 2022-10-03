@@ -62,7 +62,6 @@ possible_accents = [
     'crust'
 ]
 
-
 def main(argv):
     try:
         opts, args = getopt.getopt(argv, "hflavour:accent:", ["flavour=", "accent="])
@@ -108,9 +107,6 @@ def main(argv):
 
     with open(FILE_PATH, 'w') as file:
         file.writelines(lines)
-
-    # os.system('regolith-look refresh')
-
 
 if __name__ == '__main__':
     main(argv=sys.argv[1:])

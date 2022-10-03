@@ -18,9 +18,9 @@
 ## Usage
 
 1. Clone this repository locally
-2. Changes the variables in `root` file. The complete list of variables can be found below
-3. Copy the content of the folder to `/usr/share/regolith-look/catppuccin`
-4. Run `regolith-look set catppuccin` to apply the theme 
+2. Copy the content of the folder to `/usr/share/regolith-look/catppuccin`
+3. Run `sudo /usr/share/regolith-look/catppuccin/theme-switcher.py --flavour <flavour> --accent <accent>`
+4. Run `regolith-look set catppuccin`
 
 ## Variables
 ```shell
@@ -34,17 +34,19 @@
 ! --------------------------------------------
 #define color_accent      color_pink
 ```
-
+## Dependencies
+- [GTK](https://github.com/catppuccin/gtk)
+- [Gnome-Terminal](https://github.com/catppuccin/gnome-terminal)
 
 ## 📝 TODO
 
 - Gnome terminal themes are still missing.
 - Fix the issue regarding GTK3 themes. (The theme is not applied correctly)
-- Find a way to automate changing the flavours and the accents.
+- When changing flavours on the fly, workspaces glyph don't update their colours accordingly until logging out / back in
 
 ## 💝 Thanks to
 
-- [taka0o](https://github.com/catppuccin)
+- [taka0o](https://github.com/taka0o)
 
 &nbsp;
 

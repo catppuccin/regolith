@@ -2,36 +2,9 @@
 
 import getopt
 import sys
+from subprocess import check_output as run
 
 flavours = ['mocha', 'macchiato', 'frappe', 'latte']
-accents = [
-    'color_rosewater',
-    'color_flamingo',
-    'color_pink',
-    'color_mauve',
-    'color_red',
-    'color_maroon',
-    'color_peach',
-    'color_yellow',
-    'color_green',
-    'color_teal',
-    'color_sky',
-    'color_sapphire',
-    'color_blue',
-    'color_lavender',
-    'color_text',
-    'color_subtext1',
-    'color_subtext0',
-    'color_overlay2',
-    'color_overlay1',
-    'color_overlay0',
-    'color_surface2',
-    'color_surface1',
-    'color_surface0',
-    'color_base',
-    'color_mantle',
-    'color_crust',
-]
 
 possible_accents = [
     'rosewater',
@@ -61,6 +34,8 @@ possible_accents = [
     'mantle',
     'crust'
 ]
+
+accents = [f'color_{accent}' for accent in possible_accents]
 
 def main(argv):
     try:
@@ -107,6 +82,8 @@ def main(argv):
 
     with open(FILE_PATH, 'w') as file:
         file.writelines(lines)
+
+    run(['regolith-look', 'refresh'])
 
 if __name__ == '__main__':
     main(argv=sys.argv[1:])

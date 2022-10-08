@@ -18,8 +18,8 @@
 ## Usage
 
 1. Clone this repository locally
-2. Copy the content of the folder to `/usr/share/regolith-look/catppuccin`
-3. Run `sudo /usr/share/regolith-look/catppuccin/theme-switcher.py --flavour <flavour> --accent <accent>`
+2. Copy the content of the `catppuccin` folder to `/usr/share/regolith-look/catppuccin`
+3. Run `sudo python3 /usr/share/regolith-look/catppuccin/theme-switcher.py --flavour <flavour> --accent <accent>`
 4. Run `regolith-look set catppuccin`
 
 ## Variables

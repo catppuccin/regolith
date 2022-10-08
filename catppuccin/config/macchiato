@@ -41,7 +41,7 @@ regolith.lockscreen.wallpaper.color.shading.type:
 ! -- Theme elements
 ! --------------------------------------------
 
-gtk.theme_name: Catppuccin-Macchiato-Lavender
+gtk.theme_name: Catppuccin-Macchiato-Mauve
 gtk.icon_theme_name: Catppuccin_Dark
 
 #include "/usr/share/regolith-look/catppuccin/flavours/colors.macchiato"

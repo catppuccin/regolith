@@ -1,0 +1,3 @@
+[submodule "gtk"]
+	path = gtk
+	url = https://github.com/catppuccin/gtk

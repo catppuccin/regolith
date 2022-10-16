@@ -1,11 +1,11 @@
-gnome.terminal.color0:    color_surface1
+gnome.terminal.color0:    color_base
 gnome.terminal.color1:    color_red
 gnome.terminal.color2:    color_green
 gnome.terminal.color3:    color_yellow
 gnome.terminal.color4:    color_blue
 gnome.terminal.color5:    color_pink
 gnome.terminal.color6:    color_teal
-gnome.terminal.color7:    color_subtext1
+gnome.terminal.color7:    color_text
 gnome.terminal.color8:    color_surface2
 gnome.terminal.color9:    color_red
 gnome.terminal.color10:   color_green

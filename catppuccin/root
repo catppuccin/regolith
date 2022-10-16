@@ -41,7 +41,7 @@ regolith.compositor.picom.config: /usr/share/regolith-look/catppuccin/picom.conf
 
 #include "/usr/share/regolith-look/catppuccin/i3xrocks"
 #include "/usr/share/regolith-look/catppuccin/i3-wm"
-! #include "/usr/share/regolith-look/catppuccin/gnome-terminal"
+#include "/usr/share/regolith-look/catppuccin/gnome-terminal"
 
 ! --------------------------------------------
 ! -- Loader Path - Path to script responsible

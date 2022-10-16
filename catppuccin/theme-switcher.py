@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
-import getopt
+import argparse
 import sys
 from subprocess import check_output as run
 
 flavours = ["mocha", "macchiato", "frappe", "latte"]
-
 possible_accents = [
     "rosewater",
     "flamingo",
@@ -20,51 +19,27 @@ possible_accents = [
     "sky",
     "sapphire",
     "blue",
-    "lavender",
-    "text",
-    "subtext1",
-    "subtext0",
-    "overlay2",
-    "overlay1",
-    "overlay0",
-    "surface2",
-    "surface1",
-    "surface0",
-    "base",
-    "mantle",
-    "crust",
+    "lavender"
 ]
-
 accents = [f"color_{accent}" for accent in possible_accents]
 
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "flavour",
+    help="Flavour of Catppuccin to use",
+    choices=flavours,
+    default="mocha"
+)
+parser.add_argument(
+    "accent",
+    help="Accent to use",
+    choices=possible_accents,
+    default="blue"
+)
+args = parser.parse_args()
 
 def main(argv):
-    try:
-        opts, args = getopt.getopt(argv, "hflavour:accent:", ["flavour=", "accent="])
-    except getopt.GetoptError:
-        print("test.py --flavour <flavour> --accent <accent>")
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == "-h":
-            print("test.py --flavour <flavour> --accent <accent>")
-            sys.exit()
-        elif opt in ("-f", "--flavour"):
-            if arg in flavours:
-                flavour = arg
-            else:
-                print("Invalid flavour")
-                sys.exit(2)
-        elif opt in ("-a", "--accent"):
-            if arg in possible_accents:
-                accent = arg
-            else:
-                print("Accent not found")
-                sys.exit(2)
     FILE_PATH = "/usr/share/regolith-look/catppuccin/root"
-
-    print("Flavour is ", flavour)
-    print("Accent is ", accent)
-
     with open(FILE_PATH, "r") as file:
         lines = file.readlines()
 
@@ -73,24 +48,34 @@ def main(argv):
                 if known_flavour in line:
                     print(
                         "Found {} in line {}, changing for {}".format(
-                            known_flavour, i, flavour
+                            known_flavour, i, args.flavour
                         )
                     )
-                    lines[i] = line.replace(known_flavour, flavour)
+                    lines[i] = line.replace(known_flavour, args.flavour)
 
             for known_accent in accents:
                 if known_accent in line:
                     print(
                         "Found {} in line {}, changing for {}".format(
-                            known_accent, i, accent
+                            known_accent, i, args.accent
                         )
                     )
-                    lines[i] = line.replace(known_accent, f"color_{accent}")
+                    lines[i] = line.replace(known_accent, f"color_{args.accent}")
 
     with open(FILE_PATH, "w") as file:
         file.writelines(lines)
 
-    run(["regolith-look", "refresh"])
+    FILE_PATH = f"/usr/share/regolith-look/catppuccin/config/{args.flavour}"
+    with open(FILE_PATH, "r") as file:
+        lines = file.readlines()
+        for i, line in enumerate(lines):
+            if line.startswith("gtk.theme_name:"):
+                flavour = args.flavour.capitalize()
+                # TODO: replace this with {args.accent}, once GTK has all accents
+                lines[i] = f"gtk.theme_name: Catppuccin-{flavour}\n"
+
+    with open(FILE_PATH, "w") as file:
+        file.writelines(lines)
 
 
 if __name__ == "__main__":

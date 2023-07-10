@@ -25,13 +25,13 @@ accents = [f"color_{accent}" for accent in possible_accents]
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "flavour",
+    "--flavour",
     help="Flavour of Catppuccin to use",
     choices=flavours,
     default="mocha"
 )
 parser.add_argument(
-    "accent",
+    "--accent",
     help="Accent to use",
     choices=possible_accents,
     default="blue"

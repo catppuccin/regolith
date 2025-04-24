@@ -38,7 +38,7 @@
 
 1. Clone this repository locally
 2. Copy the content of the `catppuccin` folder to `/usr/share/regolith-look/catppuccin`
-3. Run `sudo python3 /usr/share/regolith-look/catppuccin/theme-switcher.py --flavour <flavour> --accent <accent>`
+3. Run `regolith-catppuccin --flavour <flavour> --accent <accent>`
 4. Run `regolith-look set catppuccin`
 
 ## Variables
@@ -58,9 +58,6 @@
 - [Gnome-Terminal](https://github.com/catppuccin/gnome-terminal)
 
 ## 📝 TODO
-
-- Gnome terminal themes are still missing.
-- Fix the issue regarding GTK3 themes. (The theme is not applied correctly)
 - When changing flavours on the fly, workspaces glyph don't update their colours accordingly until logging out / back in
 
 ## 💝 Thanks to

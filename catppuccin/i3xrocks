@@ -30,7 +30,7 @@
 #define typeface_bar_glyph_up 
 #define typeface_bar_glyph_wifi 
 #define typeface_bar_glyph_wired 
-#define typeface_bar_glyph_workspace 
+#define typeface_bar_glyph_workspace 
 
 i3xrocks.label.color:       color_text
 i3xrocks.value.color:       color_text

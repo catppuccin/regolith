@@ -41,7 +41,7 @@ regolith.lockscreen.wallpaper.color.shading.type:
 ! -- Theme elements
 ! --------------------------------------------
 
-gtk.theme_name: Catppuccin-Latte-Lavender
+gtk.theme_name: Catppuccin-Latte
 gtk.icon_theme_name: Catppuccin_Dark
 
 #include "/usr/share/regolith-look/catppuccin/flavours/colors.latte"

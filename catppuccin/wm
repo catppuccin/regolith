@@ -1,0 +1,84 @@
+#define i3wm_window_border_style         pixel
+#define i3wm_floatingwindow_border_style pixel
+#define i3wm_window_border_size          2
+#define i3wm_floatingwindow_border_size  2
+#define i3wm_gaps_inner_size             5
+#define i3wm_gaps_outer_size             0
+#define i3wm_bar_position                top
+
+#define Q(x) #x
+#define QUOTE(x) Q(x)
+#define glyph_font QUOTE(gtk_monospace_font_name)
+#define glyph typeface_bar_glyph_workspace
+
+ilia.stylesheet: /usr/share/regolith-look/catppuccin/ilia.css
+
+wm.bar.position: i3wm_bar_position
+wm.bar.background.color: color_mantle
+wm.bar.statusline.color: color_surface0
+wm.bar.separator.color: color_accent
+wm.bar.workspace.focused.border.color: color_accent
+wm.bar.workspace.focused.background.color: color_surface0
+wm.bar.workspace.focused.text.color: color_text
+wm.bar.workspace.active.border.color: color_surface0
+wm.bar.workspace.active.background.color: color_surface0
+wm.bar.workspace.active.text.color: color_text
+wm.bar.workspace.inactive.border.color: color_surface0
+wm.bar.workspace.inactive.background.color: color_surface0
+wm.bar.workspace.inactive.text.color: color_text
+wm.bar.workspace.urgent.border.color: color_red
+wm.bar.workspace.urgent.background.color: color_surface0
+wm.bar.workspace.urgent.text.color: color_text
+
+wm.client.focused.color.border: color_accent
+wm.client.focused.color.background: color_surface0
+wm.client.focused.color.text: color_text
+wm.client.focused.color.indicator: color_accent
+wm.client.focused.color.child_border: color_accent
+
+wm.client.focused_inactive.color.border: color_accent
+wm.client.focused_inactive.color.background: color_mantle
+wm.client.focused_inactive.color.text: color_text
+wm.client.focused_inactive.color.indicator: color_accent
+wm.client.focused_inactive.color.child_border: color_accent
+
+wm.client.unfocused.color.border: color_surface0
+wm.client.unfocused.color.background: color_surface0
+wm.client.unfocused.color.text: color_text
+wm.client.unfocused.color.indicator: color_surface0
+wm.client.unfocused.color.child_border: color_surface0
+
+wm.client.urgent.color.border: color_red
+wm.client.urgent.color.background: color_red
+wm.client.urgent.color.text: color_text
+wm.client.urgent.color.indicator: color_red
+wm.client.urgent.color.child_border: color_red
+
+wm.window.border.style: i3wm_window_border_style
+wm.window.border.size: i3wm_window_border_size
+wm.floatingwindow.border.style: i3wm_floatingwindow_border_style
+wm.floatingwindow.border.size: i3wm_floatingwindow_border_size
+wm.gaps.inner.size: i3wm_gaps_inner_size
+wm.gaps.outer.size: i3wm_gaps_outer_size
+
+#define WORKSPACE_NAME(INDEX, FONT, COLOR, GLYPH) INDEX:<span> </span><span font_desc=FONT>INDEX </span><span foreground=COLOR>GLYPH</span><span> </span>
+
+wm.workspace.01.name: WORKSPACE_NAME(1, glyph_font, QUOTE(color_mauve), glyph)
+wm.workspace.02.name: WORKSPACE_NAME(2, glyph_font, QUOTE(color_red), glyph)
+wm.workspace.03.name: WORKSPACE_NAME(3, glyph_font, QUOTE(color_maroon), glyph)
+wm.workspace.04.name: WORKSPACE_NAME(4, glyph_font, QUOTE(color_peach), glyph)
+wm.workspace.05.name: WORKSPACE_NAME(5, glyph_font, QUOTE(color_yellow), glyph)
+wm.workspace.06.name: WORKSPACE_NAME(6, glyph_font, QUOTE(color_green), glyph)
+wm.workspace.07.name: WORKSPACE_NAME(7, glyph_font, QUOTE(color_teal), glyph)
+wm.workspace.08.name: WORKSPACE_NAME(8, glyph_font, QUOTE(color_sky), glyph)
+wm.workspace.09.name: WORKSPACE_NAME(9, glyph_font, QUOTE(color_sapphire), glyph)
+wm.workspace.10.name: WORKSPACE_NAME(10, glyph_font, QUOTE(color_blue), glyph)
+wm.workspace.11.name: WORKSPACE_NAME(11, glyph_font, QUOTE(color_lavender), glyph)
+wm.workspace.12.name: WORKSPACE_NAME(12, glyph_font, QUOTE(color_mauve), glyph)
+wm.workspace.13.name: WORKSPACE_NAME(13, glyph_font, QUOTE(color_red), glyph)
+wm.workspace.14.name: WORKSPACE_NAME(14, glyph_font, QUOTE(color_maroon), glyph)
+wm.workspace.15.name: WORKSPACE_NAME(15, glyph_font, QUOTE(color_peach), glyph)
+wm.workspace.16.name: WORKSPACE_NAME(16, glyph_font, QUOTE(color_yellow), glyph)
+wm.workspace.17.name: WORKSPACE_NAME(17, glyph_font, QUOTE(color_green), glyph)
+wm.workspace.18.name: WORKSPACE_NAME(18, glyph_font, QUOTE(color_teal), glyph)
+wm.workspace.19.name: WORKSPACE_NAME(19, glyph_font, QUOTE(color_sky), glyph)

@@ -6,7 +6,7 @@
 ! -- Look name
 ! --------------------------------------------
 
-regolith.look: Catppuccin
+regolith.look: catppuccin
 
 
 
@@ -32,7 +32,7 @@ regolith.compositor.picom.config: /usr/share/regolith-look/catppuccin/picom.conf
 ! --------------------------------------------
 ! -- Selected accent you want to use
 ! --------------------------------------------
-#define color_accent      color_blue
+#define color_accent      color_mauve
 
 
 ! --------------------------------------------
@@ -40,7 +40,7 @@ regolith.compositor.picom.config: /usr/share/regolith-look/catppuccin/picom.conf
 ! --------------------------------------------
 
 #include "/usr/share/regolith-look/catppuccin/i3xrocks"
-#include "/usr/share/regolith-look/catppuccin/i3-wm"
+#include "/usr/share/regolith-look/catppuccin/wm"
 #include "/usr/share/regolith-look/catppuccin/gnome-terminal"
 
 ! --------------------------------------------
